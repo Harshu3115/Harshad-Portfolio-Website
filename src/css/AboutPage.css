@@ -1,0 +1,229 @@
+:root {
+    --primary: #5b21b6;
+    --primary-light: #7c3aed;
+    --primary-soft: #ede9fe;
+    --primary-mid: #8b5cf6;
+    --accent: #a78bfa;
+    --bg: #f5f5fa;
+    --white: #ffffff;
+    --text: #1e1b4b;
+    --muted: #64748b;
+    --border: #e2e0f0;
+    --card-shadow: 0 2px 20px rgba(91, 33, 182, .08);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+
+.about-page-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 60px 1.5rem 80px;
+}
+
+.about-page-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.about-content-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-page-label {
+    color: #7c3aed;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about-page-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e1b4b;
+    margin-bottom: 20px;
+}
+
+.about-page-bio {
+    color: var(--muted);
+    font-size: .93rem;
+    line-height: 1.75;
+    margin-bottom: 28px;
+}
+
+.about-info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+    padding-left: 0px !important;
+}
+
+.about-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.about-info-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--primary-soft);
+    display: grid;
+    place-items: center;
+    color: var(--primary-light);
+    font-size: .95rem;
+    flex-shrink: 0;
+}
+
+.about-info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-info-content strong {
+    display: block;
+    font-size: .88rem;
+    font-weight: 600;
+}
+
+.about-info-content span {
+    font-size: .84rem;
+    color: var(--muted);
+}
+
+.about-signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--primary-light);
+    line-height: 1.2;
+    margin-top: 4px;
+}
+
+.about-image-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.sig-line {
+    width: 130px;
+    height: 2px;
+    background: var(--primary-light);
+    border-radius: 2px;
+    margin-top: 4px;
+    opacity: .5;
+}
+
+
+.about-image-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 503px;
+    /* height: 380px; */
+    background: linear-gradient(160deg, #e1daff 0%, #ddd6fe 50%, #ede9fe 100%);
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
+    color: rgba(91, 33, 182, .2);
+}
+
+.about-profile-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Stats */
+
+.about-stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:15px;
+
+    background: #fff;
+    border: 1px solid #e9d5ff;
+    border-radius: 25px;
+
+    padding: 20px 30px;
+    margin: 60px 0;
+}
+
+.about-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 1rem;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+}
+
+.about-stat-icon {
+    font-size: 1.2rem;
+    color: #1e1b6b;
+    margin-bottom: 20px;
+}
+
+.about-stat-number {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    line-height: 1;
+}
+
+.about-stat-text {
+    color: var(--text-muted);
+    font-size: .85rem;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .about-stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .about-stats-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stat-number {
+        font-size: 2.5rem;
+    }
+
+    .about-stat-text {
+        font-size: 1rem;
+    }
+}
